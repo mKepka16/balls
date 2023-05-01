@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(61, 61, 61);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+body.light_theme {
+  background-color: rgb(242, 242, 242);
+}
+
+.grid {
+  display: inline-grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.node {
+  height: 60px;
+  width: 60px;
+  border: 2px solid rgb(163, 163, 163);
+  margin: 2px;
+  display: flex;
+  padding: 6px;
+}
+
+.node.with_ball {
+  cursor: pointer;
+}
+
+.node.with_ball:hover {
+  border-color: white;
+}
+
+.light_theme .node.with_ball:hover {
+  border-color: rgb(61, 61, 61);
+}
+
+.ball {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.node.active {
+  border-color: rgb(113, 255, 160) !important;
+}
+
+.node.potential_target {
+  border-color: rgb(247, 104, 10) !important;
+  cursor: pointer;
+}
+
+.node.in_path {
+  border-color: rgb(36, 221, 235);
+}
+
+.preview_parent {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.preview {
+  display: flex;
+  flex-direction: row;
+}
+
+.preview_cell {
+  height: 60px;
+  width: 60px;
+  border: 2px solid rgb(163, 163, 163);
+  margin: 2px;
+  display: flex;
+  padding: 6px;
+}
+
+.preview_ball {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.points_parent {
+  position: absolute;
+  top: 120px;
+  left: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.light_theme .points_parent {
+  color: rgb(61, 61, 61);
+}
+
+.points_label {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.points {
+  font-weight: 300;
+  font-size: 28px;
+  margin-left: 5px;
+}

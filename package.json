@@ -1,0 +1,23 @@
+{
+  "name": "astar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production",
+    "gen-docs": "npx typedoc --entryPointStrategy expand ./ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "^9.2.7",
+    "typedoc": "^0.22.13",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "typescript": "^4.6.2"
+  }
+}
